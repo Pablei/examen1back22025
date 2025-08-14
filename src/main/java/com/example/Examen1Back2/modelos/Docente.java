@@ -4,14 +4,12 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entit
+@Entity
 public class Docente {
-
-
+//Debia crearse el @Id para definir el campo de llave primaria
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-
     private  String especialidad;
 
     @OneToMany(mappedBy = "docente")

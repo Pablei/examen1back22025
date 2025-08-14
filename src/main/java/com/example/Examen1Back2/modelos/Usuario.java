@@ -2,7 +2,7 @@ package com.example.Examen1Back2.modelos;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
-@Entit
+@Entity //faltaba l 'y'
 @Table(name = "usuarios")
 public class Usuario {
 
