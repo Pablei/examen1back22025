@@ -16,7 +16,7 @@ public class Curso {
     @ManyToOne
     @JoinColumn(name="fk_docente", referencedColumnName = "id")
     @JsonBackReference(value = "docente-curso")
-    //Doscente docente debia declararse private...
+    //Docente docente debia declararse private...
     private Docente docente;
 
     public Curso() {

@@ -20,8 +20,14 @@ public class Docente {
     @JoinColumn(name = "fk_usuario", referencedColumnName = "id_usuario")
     @JsonManagedReference(value = "docente-usuario")
     private Usuario usuario;
+//Cree los constructores para id y especialidad. Luego vere si es necesario crearlos para usuario y la lista de cursos
+    public Docente() {
+    }
 
-
+    public Docente(Integer id, String especialidad) {
+        this.id = id;
+        this.especialidad = especialidad;
+    }
 
     public Integer getId() {
         return id;
@@ -37,5 +43,21 @@ public class Docente {
 
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
